@@ -20,5 +20,5 @@ def main():
 		while (nnum>0):
 			y=y*nnum
 			nnum-=1
-		print(gtxt(f"Your real word is  {num} and its factorial is {y}"))
+		print(gtxt(f"Your number is  [{num}] and its factorial is [{y}]"))
 main()
