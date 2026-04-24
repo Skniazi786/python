@@ -7,18 +7,18 @@ def rtxt(x):
 def ptxt(x):
 	return "\033[1;95m"+x+"\033[0m"
 def main():
-	word = input(btxt("Please type a word and I will write in reverse without using built in fuctions such as reverse: "))
-	if len(word)==0:
+	num = input(btxt("Please type a number and I will write a factorial for it: "))
+	if len(num)==0:
 		print(rtxt("Please type a word bigger then empty space!"))
 		main()
-	elif word.isdigit()==True:
-		print(rtxt("Please don't type a number type a word!")) 
+	elif num.isdigit()==False:
+		print(rtxt("Please don't type a word type a Number!")) 
 		main()
 	else:
-		neww=word
-		y=[]
-		for w in neww:
-			y.append(neww[-1])
-			neww=neww[:-1]
-		print(gtxt(f"Your real word is  {word} and its reverse is {''.join(y)}"))
+		nnum = int(num)
+		y=1
+		while (nnum>0):
+			y=y*nnum
+			nnum-=1
+		print(gtxt(f"Your real word is  {num} and its factorial is {y}"))
 main()
