@@ -14,3 +14,7 @@ def main():
                 i += 1
         print(f"{n} {'is a' if status else 'is not a'} prime number.")
 main()
+
+
+#Is this the best prime tracker function? not really..
+#But I plan to clean it up a bit more..
