@@ -16,7 +16,8 @@ Ask the user for a number and check if it is a prime number or not.
 
 ### 2. Find All Primes Up to N
 Take a number N and print all prime numbers from 1 to N.
-<!-- Link: [Solution](Q2.py) -->
+
+ Link 1: [Sumeet's Answer'](Sk/Q2.py)
 
 ---
 
