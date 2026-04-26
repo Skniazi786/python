@@ -1,6 +1,6 @@
 def cp(txt,a="w",b="bk"):
 	fg={
-		"bk": 30,
+		"bk": 30, 
 		"r" : 91,
 		"g" : 92,
 		"y" : 93,
@@ -25,3 +25,14 @@ def cp(txt,a="w",b="bk"):
 def main():
 	pass
 main()
+"""
+black = bk
+red = r
+green = g
+yellow = y
+blue = b
+magenta = p
+cyan = cy
+white = w
+reset = c
+"""
