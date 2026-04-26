@@ -8,6 +8,7 @@ Good — now we'll step up a level. These will push you into loops, functions, l
 
 ### 1. Prime Number Checker
 Ask the user for a number and check if it is a prime number or not.
+
  Link 1: [Usama's Asnwer'](UkRs/Q1.py)
  Link 2: [Sumeet's Answer'](Sk/Q1.py)
 
