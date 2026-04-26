@@ -1,5 +1,7 @@
 Good — now we’ll step up a level. These will push you into loops, functions, logic, and basic data handling.
 Here are 10 slightly harder Python problems:
+
+
 1. Prime number checker
 Ask the user for a number and check if it is a prime number or not.
 
