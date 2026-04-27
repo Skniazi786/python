@@ -9,15 +9,15 @@ Good — now we'll step up a level. These will push you into loops, functions, l
 ### 1. Prime Number Checker
 Ask the user for a number and check if it is a prime number or not.
 
- Link 1: [Usama's Asnwer'](UkRs/Q1.py)
- Link 2: [Sumeet's Answer'](Sk/Q1.py)
+ Link 1: [Usama's Asnwer](UkRs/Q1.py)
+ Link 2: [Sumeet's Answer](Sk/Q1.py)
 
 ---
 
 ### 2. Find All Primes Up to N
 Take a number N and print all prime numbers from 1 to N.
 
- Link 1: [Sumeet's Answer'](Sk/Q2.py)
+ Link 1: [Sumeet's Answer](Sk/Q2.py)
 
 ---
 
@@ -28,6 +28,8 @@ Create a calculator using functions:
 - multiply
 - divide
 - Ask user for choice.
+
+ Link 1: [Sumeet's Answer](Sk/Q3.py)
 
 <!-- Link: [Solution](Q3.py) -->
 
