@@ -20,8 +20,8 @@ def main():
             break
         elif not n.isdigit():
             print("Kindly enter a number.")
-        elif int(n) == 2 or int(n) == 3:
-            print(f"You really can't tell if {n} is a priem number or not??")
+        elif int(n) == 2 or int(n) == 1:
+            print(f"You really can't tell if {n} is a prime number or not??")
         else:
             num = int(n)
             list = []
