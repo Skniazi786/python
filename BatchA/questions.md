@@ -35,6 +35,7 @@ Create a calculator using functions:
 - Ask user for choice.
 
 Link 1: [Sumeet's Answer](Sk/Q3.py)
+Link 2: [Usama's Answer](UkRs/Q3.py)
 
 <!-- Link: [Solution](Q3.py) -->
 
