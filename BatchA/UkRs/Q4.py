@@ -11,6 +11,9 @@ def main():
             print(">> ERROR: ALPHABETS SPOTTED.")
             continue
         else:
-            print(f"Total count of the {num} is {len(num)}.")
+            n = 0
+            for i in num:
+                n += 1
+            print(f"Total count of the {num} is {n}.")
             break
 main()
