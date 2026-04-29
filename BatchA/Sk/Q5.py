@@ -12,7 +12,7 @@ def main():
 		""" Using while loop so if a player makes a mistake he is asked again, 
 		everytime he makes a mistake continue restart the program to ask him again."""
 		word1 = input(cp("Please give me a number or word and check whether its a palindrome!","b","w"))
-		if (word1 == ""):
+		if (word1.strip(" ") == ""):
 			# Making sure the user doesn't type enter by mistake!
 			print(cp("Empty space is a palindrome no need to check","bk","y"))
 			continue
