@@ -14,6 +14,7 @@ def main():
 		list_size = input(cp("Please type the size of list you want to check for max value :","b","w"))
 		if (list_size.strip()==""):
 			print(cp("This is empty space! Try again","bk","y"))
+			continue
 		elif (list_size.isdigit()==False):
 			print(cp("Please type a number for list size.","bk","y"))
 			continue
