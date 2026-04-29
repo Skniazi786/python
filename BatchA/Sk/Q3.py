@@ -9,7 +9,7 @@ def Multi(a,b):
 def Div(a,b):
 	return a/b
 def main():
-	funcs = ["add","sub","multi","div","+","-","x","*","/"]
+	funcs = ("add","sub","multi","div","+","-","x","*","/")
 	# Storing all could be answers from user regarding these calculations.
 	firstry=True
 	# If they are trying for first time or again.
@@ -58,7 +58,7 @@ def main():
 					case "multi" | "*" |"x":
 						print(cp(f"Your Answer is [{Multi(num1,num2)}] to Multiplication of [{num1}],[{num2}].","y","g"))
 					case "div" | "/":
-						if num1==0:
+						if num2==0:
 							# Dividing anything with zero results in error or infinity making sure that doesn't happen.'
 							print(cp(f"Sorry You can not divide something by zero.","cy","r"))
 							firstry=True
