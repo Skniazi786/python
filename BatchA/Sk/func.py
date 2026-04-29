@@ -21,7 +21,7 @@ def cp(txt,a="w",b="bk"):
 		"w" : 47,
 		"c" : ""
 	}
-	return f"\033[1;{fg[a]};{bg[b]}m{txt} \033[0m"
+	return f"\033[1;{fg[a]};{bg[b]}m{txt}\033[0m"
 def main():
 	pass
 main()

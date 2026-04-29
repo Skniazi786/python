@@ -76,6 +76,7 @@ Link 2: [Sumeet's Answer](Sk/Q5.py)
 
 Take a list of numbers from user and find the largest without using `max()`.
 
+Link 1: [Sumeet's Answer](Sk/Q6.py)
 <!-- Link: [Solution](Q6.py) -->
 
 ---
