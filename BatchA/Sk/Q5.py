@@ -16,6 +16,8 @@ def main():
 			# Making sure the user doesn't type enter by mistake or empty space!
 			print(cp("Empty space is a palindrome no need to check","bk","y"))
 			continue
+		elif len(word1)==1:
+			print(cp(f"Sorry it is pointles to check if 1 digit is a palindrome!","cy","r"))
 		else:
 			word2 = cinp(word1)
 			# Making a spare variable so I don't need to use function again.
