@@ -51,7 +51,7 @@ Ask user for a number and count how many digits it has.
 - Output: `5`
 
 Link 1: [Usama's Answer](UkRs/Q4.py)
-Link 1: [Sumeet's Answer](Sk/Q4.py)
+Link 2: [Sumeet's Answer](Sk/Q4.py)
 
 
 
@@ -67,6 +67,7 @@ Check if a word or number is a palindrome (same forward and backward).
 - `hello` → No
 
 Link 1: [Usama's Answer](UkRs/Q5.py)
+Link 2: [Sumeet's Answer](Sk/Q5.py)
 
 
 ---
