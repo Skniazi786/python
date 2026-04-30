@@ -85,6 +85,7 @@ Link 1: [Sumeet's Answer](Sk/Q6.py)
 
 Take a list from user and reverse it without using `[::-1]`.
 
+Link 1: [Sumeet's Answer](Sk/Q7.py)
 <!-- Link: [Solution](Q7.py) -->
 
 ---
@@ -96,6 +97,7 @@ Print first n Fibonacci numbers.
 **Example (n=6):**
 `0 1 1 2 3 5`
 
+Link 1: [Sumeet's Answer](Sk/Q8.py)
 <!-- Link: [Solution](Q8.py) -->
 
 ---
