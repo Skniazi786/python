@@ -111,6 +111,7 @@ Take a list and remove repeated values.
 - Input: `[1, 2, 2, 3, 3, 3]`
 - Output: `[1, 2, 3]`
 
+Link 1: [Sumeet's Answer](Sk/Q9.py)
 <!-- Link: [Solution](Q9.py) -->
 
 ---

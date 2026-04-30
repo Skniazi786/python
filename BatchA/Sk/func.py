@@ -1,4 +1,4 @@
-def cp(txt,a="w",b="bk"):
+def cp(txt="",a="w",b="bk",inpu=False,flu=False):
 	fg={
 		"bk": 30, 
 		"r" : 91,
@@ -8,7 +8,7 @@ def cp(txt,a="w",b="bk"):
 		"p" : 95,
 		"cy": 96,
 		"w" : 97,
-		"c" : ""
+		"c" : "0"
 	}
 	bg={
 		"bk": 40,
@@ -19,9 +19,13 @@ def cp(txt,a="w",b="bk"):
 		"p" : 45,
 		"cy": 46,
 		"w" : 47,
-		"c" : ""
+		"c" : "0"
 	}
-	return f"\033[1;{fg[a]};{bg[b]}m{txt}\033[0m"
+	if inpu==True:
+		return f"\033[1;{fg[a]};{bg[b]}m{txt}\033[0m \033[1;{fg['y']};{bg['bk']}m"
+	else: return f"\033[1;{fg[a]};{bg[b]}m{txt}\033[0m"
+	if fl==True:
+		return"\033[0m"
 def main():
 	pass
 main()
