@@ -130,6 +130,7 @@ Take a sentence and count how many times each word appears.
   - `and → 1`
   - `coding → 1`
 
+Link 1: [Sumeet's Answer](Sk/Q10.py)
 <!-- Link: [Solution](Q10.py) -->
 
 ---
