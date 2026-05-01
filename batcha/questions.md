@@ -37,8 +37,6 @@ Create a calculator using functions:
 Link 1: [Sumeet's Answer](sk/Q3.py)
 Link 2: [Usama's Answer](ukrs/Q3.py)
 
-
-
 ---
 
 ### 4. Count Digits in a Number
@@ -52,8 +50,6 @@ Ask user for a number and count how many digits it has.
 
 Link 1: [Usama's Answer](ukrs/Q4.py)
 Link 2: [Sumeet's Answer](sk/Q4.py)
-
-
 
 ---
 
@@ -69,7 +65,6 @@ Check if a word or number is a palindrome (same forward and backward).
 Link 1: [Usama's Answer](ukrs/Q5.py)
 Link 2: [Sumeet's Answer](sk/Q5.py)
 
-
 ---
 
 ### 6. Find Largest Number in a List
@@ -77,6 +72,8 @@ Link 2: [Sumeet's Answer](sk/Q5.py)
 Take a list of numbers from user and find the largest without using `max()`.
 
 Link 1: [Sumeet's Answer](sk/Q6.py)
+Link 2: [Usama's Answer](UkRs/Q6.py)
+
 <!-- Link: [Solution](Q6.py) -->
 
 ---
@@ -86,6 +83,7 @@ Link 1: [Sumeet's Answer](sk/Q6.py)
 Take a list from user and reverse it without using `[::-1]`.
 
 Link 1: [Sumeet's Answer](sk/Q7.py)
+
 <!-- Link: [Solution](Q7.py) -->
 
 ---
@@ -98,6 +96,7 @@ Print first n Fibonacci numbers.
 `0 1 1 2 3 5`
 
 Link 1: [Sumeet's Answer](sk/Q8.py)
+
 <!-- Link: [Solution](Q8.py) -->
 
 ---
@@ -112,6 +111,7 @@ Take a list and remove repeated values.
 - Output: `[1, 2, 3]`
 
 Link 1: [Sumeet's Answer](sk/Q9.py)
+
 <!-- Link: [Solution](Q9.py) -->
 
 ---
@@ -131,6 +131,7 @@ Take a sentence and count how many times each word appears.
   - `coding → 1`
 
 Link 1: [Sumeet's Answer](sk/Q10.py)
+
 <!-- Link: [Solution](Q10.py) -->
 
 ---
