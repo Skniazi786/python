@@ -2,13 +2,13 @@ from func import cp
 	# Importing cp function from my func.py file which only gives me good colouring for terminal.
 list_by_user=[]
 def r_max(mylist):
-	c=0
+	c=int(mylist[0])
 	for i in mylist:
 		i=int(i)
 		if c<i:
 			c=i
 	else:
-		return c
+		return c	
 def main():
 	while(True):
 		list_size = input(cp("Please type the size of list you want to check for max value :","b","w"))
@@ -32,7 +32,7 @@ def main():
 				if (num.strip()==""):
 					print(cp("Please don't type empty string for this list try again","bk","y"))
 					continue
-				elif (num.isdigit()==False):
+				elif (num.isdigit()==False and num.lstrip("-").isdigit()==False):
 					print(cp("Please type numbers only no words or characters.","cy","r"))
 					continue
 				else:
