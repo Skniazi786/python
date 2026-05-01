@@ -83,6 +83,7 @@ Link 2: [Usama's Answer](UkRs/Q6.py)
 Take a list from user and reverse it without using `[::-1]`.
 
 Link 1: [Sumeet's Answer](sk/Q7.py)
+Link 2: [Usama's Answer](UkRs/Q7.py)
 
 <!-- Link: [Solution](Q7.py) -->
 
