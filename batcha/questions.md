@@ -97,6 +97,7 @@ Print first n Fibonacci numbers.
 `0 1 1 2 3 5`
 
 Link 1: [Sumeet's Answer](sk/Q8.py)
+Link 2: [Usama's Answer](UkRs/Q8.py)
 
 <!-- Link: [Solution](Q8.py) -->
 
