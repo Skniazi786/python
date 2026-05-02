@@ -113,6 +113,7 @@ Take a list and remove repeated values.
 - Output: `[1, 2, 3]`
 
 Link 1: [Sumeet's Answer](sk/Q9.py)
+Link 2: [Usama's Answer](UkRs/Q9.py)
 
 <!-- Link: [Solution](Q9.py) -->
 
@@ -133,6 +134,7 @@ Take a sentence and count how many times each word appears.
   - `coding → 1`
 
 Link 1: [Sumeet's Answer](sk/Q10.py)
+Link 2: [Usama's Answer](UkRs/Q10.py)
 
 <!-- Link: [Solution](Q10.py) -->
 
