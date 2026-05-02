@@ -33,7 +33,7 @@ def main():
 				if (num.strip()==""):
 					print(cp("Please don't type empty string for this list try again","bk","y"))
 					continue
-				elif(inp.isdigit()==False):
+				elif(inp.isdigit()==False and inp.lstrip("-").isdigit()==False):
 					print(cp("Please type numbers only no words or characters.","cy","r"))
 					continue
 				else:
