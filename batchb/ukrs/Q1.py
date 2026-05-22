@@ -1,7 +1,8 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QLabel,QPushButton, QLineEdit, QTableWidget, QTableWidgetItem, QMessageBox
 from PyQt5.QtCore import Qt
 
-#Use these because why not.. Was planning to stich these to the window but nah.. 
+#Finally switched to Class based app after what? 27 days.. sheesh.. talk about days wasted..
+
 btn_style_green, btn_style_red = """
     QPushButton {
         background-color: #27ae60;
@@ -29,87 +30,101 @@ btn_style_green, btn_style_red = """
         background-color: #c0392b;
     }
 """
-app = QApplication([])
 
-window = QWidget()
-window.setWindowTitle("Table Generator")
-#after testing with multiple widths.. this one seemed perfeclty matchin with the table most right line..
-window.setFixedWidth(422)
-window.table_status, window.original_height = False, 100
-window.setFixedHeight(window.original_height)
-grid = QGridLayout()
+#The reason why i use QWidget is gonna be honest cuz of chatgpt, it's better to use QWidget as a the base class since i will be using it as a well.. a base huehue..
+class TableGenerator(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.table_status = False
+        self.original_height = 100
+        self.create_widgets()
+        self.create_grid()
+        self.create_link()
 
-number_label = QLabel("Enter the number:")
-number_box = QLineEdit()
-number_box.setPlaceholderText('Number')
+    def create_widgets(self):
+        #Prepare The Labels
+        self.number_label = QLabel("Enter the number:")
+        self.number_box = QLineEdit()
+        self.number_box.setPlaceholderText('Number')
 
-row_label = QLabel("Enter the rows:")
-row_box = QLineEdit()
-row_box.setPlaceholderText("Rows")
+        self.row_label = QLabel("Enter the rows:")
+        self.row_box = QLineEdit()
+        self.row_box.setPlaceholderText("Rows")
+        
+        self.table = QTableWidget()
+        self.table.setColumnCount(3)
+        self.table.setHorizontalHeaderLabels(["Number","Times","Result"])
+        self.table.verticalHeader().setVisible(False)
+        self.table.horizontalHeader().setStretchLastSection(True)
+        self.table.setVisible(False)
+        self.toggle_table = QPushButton("Show Table")
+        self.toggle_table.setStyleSheet(btn_style_green)
+    
+    def setup_window(self):
+        self.setWindowTitle('Table Generator')
+        self.setFixedWidth(422)
+        self.setFixedHeight(self.original_height)
+ 
+    def create_grid(self):
+        grid = QGridLayout()
+        grid.addWidget(self.number_label,0,0)
+        grid.addWidget(self.number_box,0,1)
+        grid.addWidget(self.row_label,1,0)
+        grid.addWidget(self.row_box,1,1)
+        # the 0 is row, 2 is column, 2 is rowspan and 1 is coumn span..
+        grid.addWidget(self.toggle_table,0,2,2,1)
+        grid.addWidget(self.table,2,0,1,3)
+        self.setLayout(grid)
 
-# copied your design for table word by word.. because why not..
-table = QTableWidget()
-table.setColumnCount(3)
-table.setHorizontalHeaderLabels(["Number","Times","Result"])
-table.verticalHeader().setVisible(False)
-table.horizontalHeader().setStretchLastSection(True)
-table.setVisible(False)
+#a whole new function just for this looked cooler in my head..
+    def create_link(self):
+        self.toggle_table.clicked.connect(self.on_click)
+        
+    def on_click(self):
+        try:
+            num = int(self.number_box.text())
+            rows = int(self.row_box.text())
+            # really wanted to add that dynamic open/close button so resorted to this.. 
+            if not self.table_status:
+                self.table.setRowCount(rows)
+                for i in range(rows):
+                    # in my looking up table items.. i surprisingly didn't found the table.insertrow.. so decided to skip it.. and it worked! yea that i+1 is a bit ugly to look at.. too tired right now to think of a better solution.
+                    item1,item2,item3 = QTableWidgetItem(f"{num}"), QTableWidgetItem(f"{i+1}"), QTableWidgetItem(f"{num*(i+1)}")
+                    item1.setTextAlignment(Qt.AlignCenter)
+                    item2.setTextAlignment(Qt.AlignCenter)
+                    item3.setTextAlignment(Qt.AlignCenter)
+                    self.table.setItem(i,0,item1)
+                    self.table.setItem(i,1,item2)
+                    self.table.setItem(i,2,item3)
+                self.toggle_table.setStyleSheet(btn_style_red)
+                self.toggle_table.setText("Close Table")
+                self.table_status = True
+                self.setFixedHeight(500)
+                self.table.setVisible(True)
+                self.number_box.setVisible(False)
+                self.row_box.setVisible(False)
 
-toggle_table = QPushButton("Show Table")
-toggle_table.setStyleSheet(btn_style_green)
-def on_click():
-    try:
-        num = int(number_box.text())
-        rows = int(row_box.text())
-        # really wanted to add that dynamic open/close button so resorted to this.. 
-        if not window.table_status:
-            table.setRowCount(rows)
-            for i in range(rows):
-                # in my looking up table items.. i surprisingly didn't found the table.insertrow.. so decided to skip it.. and it worked! yea that i+1 is a bit ugly to look at.. too tired right now to think of a better solution.
-                item1,item2,item3 = QTableWidgetItem(f"{num}"), QTableWidgetItem(f"{i+1}"), QTableWidgetItem(f"{num*(i+1)}")
-                item1.setTextAlignment(Qt.AlignCenter)
-                item2.setTextAlignment(Qt.AlignCenter)
-                item3.setTextAlignment(Qt.AlignCenter)
-                table.setItem(i,0,item1)
-                table.setItem(i,1,item2)
-                table.setItem(i,2,item3)
-            toggle_table.setStyleSheet(btn_style_red)
-            toggle_table.setText("Close Table")
-            window.table_status = True
-            window.setFixedHeight(500)
-            table.setVisible(True)
-            number_box.setVisible(False)
-            row_box.setVisible(False)
+            else:
+                # took this setvisible straight from chatgpt.. not gonna lie or deny it.. *supposedly* it's supposed to work with all the other widgets as well.. maybe even the whole window..
+                self.table.setVisible(False)
+                self.number_box.setVisible(True)
+                self.row_box.setVisible(True)
+                self.number_box.clear()
+                self.row_box.clear()
+                self.toggle_table.setStyleSheet(btn_style_green)
+                self.toggle_table.setText("Show Table")
+                self.table_status = False
 
-        else:
-            # took this setvisible straight from chatgpt.. not gonna lie or deny it.. *supposedly* it's supposed to work with all the other widgets as well.. maybe even the whole window..
-            table.setVisible(False)
-            number_box.setVisible(True)
-            row_box.setVisible(True)
-            number_box.clear()
-            row_box.clear()
-            toggle_table.setStyleSheet(btn_style_green)
-            toggle_table.setText("Show Table")
-            window.table_status = False
-            window.setFixedHeight(window.original_height)
+                self.setFixedHeight(self.original_height)
             
 
-    except ValueError:
-        # really wanted to do this.. in tkinter there was a small popup on bottom right for errors.. gonna change that with this as well if i live till then..
-        QMessageBox.warning(window,'Input Error', 'Kindly enter valid numbers only.\nNumber and Rows must be integers.')
+        except ValueError:
+            # really wanted to do this.. in tkinter there was a small popup on bottom right for errors.. gonna change that with this as well if i live till then..
+            QMessageBox.warning(self,'Input Error', 'Kindly enter valid numbers only.\nNumber and Rows must be integers.')
 
-toggle_table.clicked.connect(on_click)
-
-grid.addWidget(number_label,0,0)
-grid.addWidget(number_box,0,1)
-grid.addWidget(row_label,1,0)
-grid.addWidget(row_box,1,1)
-# the 0 is row, 2 is column, 2 is rowspan and 1 is column span..
-grid.addWidget(toggle_table,0,2,2,1)
-grid.addWidget(table,2,0,1,3)
-window.setLayout(grid)
+#instead of adding the Application in my class, it's better to just make it in while running the function.. supposedly i/we should be able to add more windows in future (InshAllah)
+app = QApplication([])
+window = TableGenerator()
 window.show()
-# supposedly even the chatgpt wanted me to use _exec() but exec() is working fine so meh..
+#works fine, do let me know if you see any issue on yer end..
 app.exec()
-
-# gonna make this class based tomorrow.. it's 4 am now.. i am too tired.. we need to switch to class based right now..
