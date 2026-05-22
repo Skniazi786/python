@@ -39,6 +39,7 @@ class TableGenerator(QWidget):
         self.original_height = 100
         self.create_widgets()
         self.create_grid()
+        self.setup_window()
         self.create_link()
 
     def create_widgets(self):
