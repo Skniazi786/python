@@ -63,18 +63,17 @@ class CaesarCipher(QWidget):
             if self.ciphered:
                 self.reset_program()
             else:
-                self.text = self.text_box.text().strip()
+                self.text = self.text_box.text().strip().lower()
                 self.num = int(self.number_box.text().strip())
                 ciphered_charas = []
                 for chara in self.text:
-                    ascii_num = ord(chara)
-                    shifted = ascii_num + self.num
-                    if shifted > ord('z'):
-                        diff = shifted - ord('z')
-                        diff += ord('a')
-                        ciphered_charas.append(chr(diff))
+                    if chara.isalpha():
+                        ascii_num = ord(chara) - ord('a')
+                        shifted = (ascii_num + self.num) % 26
+                        final_char = chr(shifted + ord('a'))
+                        ciphered_charas.append(final_char)
                     else:
-                        ciphered_charas.append(chr(shifted))
+                        ciphered_charas.append(chara)
                 c_text = "".join(ciphered_charas)
                 self.result_label.setText(f'The ciphered text is {c_text}')
                 self.successful_input()
